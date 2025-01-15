@@ -43,7 +43,7 @@ async function LinksDropdown() {
         </SignedOut>
         <SignedIn>
           {links.map((link) => {
-            if (link.label === 'dashboard' && !isAdmin) return null;
+            if (link.label === 'Dashboard' && !isAdmin) return null;
             return (
               <DropdownMenuItem key={link.href}>
                 <Link href={link.href} className='capitalize w-full'>
