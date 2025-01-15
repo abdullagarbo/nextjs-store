@@ -5,7 +5,11 @@ type ProductsProps = {
   search?: string;
 };
 
-async function Products({ searchParams }: { searchParams: ProductsProps }) {
+async function Products({
+  searchParams,
+}: {
+  searchParams: Promise<ProductsProps>;
+}) {
   const { layout, search } = await searchParams;
   const paramsLayout = layout || 'grid';
   const paramsSearch = search || '';
