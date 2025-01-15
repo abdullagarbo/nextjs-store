@@ -14,8 +14,9 @@ import { links } from '@/utils/links';
 import UserIcon from './UserIcon';
 import SignOutLink from './SignOutLink';
 
-function LinksDropdown() {
-  const { userId } = auth();
+async function LinksDropdown() {
+  const { userId } = await auth();
+
   const isAdmin = userId === process.env.ADMIN_USER_ID;
 
   return (
