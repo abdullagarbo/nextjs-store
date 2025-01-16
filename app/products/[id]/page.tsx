@@ -3,6 +3,7 @@ import BreadCrumbs from '@/components/product/BreadCrumbs';
 import FavoriteToggleButton from '@/components/products/FavoriteToggleButton';
 import AddToCart from '@/components/product/AddToCart';
 import ProductRating from '@/components/product/ProductRating';
+import ShareButton from '@/components/product/ShareButton';
 import { fetchSingleProduct } from '@/utils/actions';
 import { formatCurrency } from '@/utils/format';
 
@@ -39,6 +40,7 @@ async function SingleProductPage({
           <div className='flex gap-x-8 items-center'>
             <h1 className='capitalize text-3xl font-bold'>{name}</h1>
             <FavoriteToggleButton productId={id} />
+            <ShareButton name={product.name} productId={id} />
           </div>
           <ProductRating productId={id} />
           <h4 className='text-xl mt-2'>{company}</h4>
